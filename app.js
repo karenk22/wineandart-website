@@ -63,9 +63,10 @@ function paletteStyle(w) {
 }
 
 function renderHero(container, w) {
+  const hasImg = !!w.image;
   container.innerHTML = `
-    <div class="hero" style="${paletteStyle(w)}">
-      ${w.image ? `<div class="hero-bg" style="background-image:url('${w.image}')"></div>` : ""}
+    <div class="hero ${hasImg ? "has-image" : ""}" style="${paletteStyle(w)}">
+      ${hasImg ? `<div class="hero-bg" style="background-image:url('${w.image}')"></div>` : ""}
       <div class="hero-gradient"></div>
       <div class="hero-pattern"></div>
       <div class="hero-caption">
@@ -95,9 +96,11 @@ function renderBlurbs(container, w) {
 
 function renderCard(w, lastDate) {
   const meta = lastDate ? `Last featured · ${lastDate.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}` : "";
+  const hasImg = !!w.image;
+  const heroStyle = hasImg ? `background-image:url('${w.image}')` : "";
   return `
     <a class="card" href="winery.html?id=${encodeURIComponent(w.id)}" style="${paletteStyle(w)}">
-      <div class="card-hero"></div>
+      <div class="card-hero ${hasImg ? "has-image" : ""}" style="${heroStyle}"></div>
       <div class="card-body">
         <div class="card-eyebrow">${w.architect} · ${w.year}</div>
         <h3>${w.name}</h3>
