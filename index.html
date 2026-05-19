@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>wineandart — daily Bordeaux winery architecture</title>
+  <meta name="description" content="A daily look at a Bordeaux winery and the architect who designed it." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand">wine<em>and</em>art</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Today</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="eyebrow">Today · <span id="today-date">—</span></p>
+    <h1 class="headline">A Bordeaux winery, by its architect.</h1>
+    <p class="subhead">One château, one architect, one building — every day.</p>
+
+    <div id="hero"></div>
+    <div id="blurbs" class="blurbs"></div>
+
+    <hr class="section-rule" />
+    <h2 class="section-title">From the archive</h2>
+    <div id="archive" class="archive-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>wineandart &middot; a small daily field guide to wine architecture in Bordeaux &middot; <a href="archive.html">the archive</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>wineandart.bootHome();</script>
+</body>
+</html>

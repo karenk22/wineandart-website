@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About · wineandart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand">wine<em>and</em>art</a>
+      <nav class="nav">
+        <a href="index.html">Today</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="eyebrow">About</p>
+    <h1 class="headline">A field guide, one day at a time.</h1>
+    <p class="subhead">Wine country has quietly become one of the most interesting places to look at contemporary architecture.</p>
+
+    <div class="blurbs">
+      <section class="blurb">
+        <h2>What this is</h2>
+        <p>Every day, wineandart features a single Bordeaux winery whose buildings are worth looking at — a Mario Botta cellar, a Norman Foster vat room, a Jean Nouvel mirror, a Ricardo Bofill basilica under the vines. We write a short note on the estate, a short note on the architect, and a longer note on what the building is actually trying to do.</p>
+      </section>
+      <section class="blurb">
+        <h2>How the rotation works</h2>
+        <p>The home page changes every day. The choice is deterministic, driven by the date, so everyone visiting on the same day sees the same winery. Yesterday's, last week's and last month's editions are all kept in the <a href="archive.html">archive</a>, with a permanent link for every château.</p>
+      </section>
+      <section class="blurb">
+        <h2>Adding a new winery</h2>
+        <p>The library lives in a single file — <code>wineries.json</code> — at the root of the repo. Add a new entry there (name, appellation, architect, year, three blurbs, two hex colours for the cover) and it will automatically slot into the rotation and appear in the archive the next time the page loads.</p>
+      </section>
+    </div>
+
+    <hr class="section-rule" />
+    <p class="subhead" style="text-align:center;">Made with appreciation for stone, glass, concrete — and Cabernet Franc.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>wineandart &middot; <a href="archive.html">the archive</a></p>
+  </footer>
+</body>
+</html>
